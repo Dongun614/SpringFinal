@@ -12,6 +12,6 @@
 </head>
 <body>
 Hello 안녕!!!!
-<img src="img/sample.png"/>
+<a href="javascript:location.href='board/posts'">리스트로 이동</a>
 </body>
 </html>

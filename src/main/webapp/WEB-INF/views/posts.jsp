@@ -33,7 +33,7 @@
 <script>
 	function delete_ok(id){
 		var a = confirm("정말로 삭제하겠습니까?");
-		if(a) location.href='deletepost.jsp?id=' + id;
+		if(a) location.href='deleteok/' + id;
 	}
 </script>
 </head>
@@ -60,11 +60,12 @@
 		<td>${u.getCategory()}</td>
 		<td>${u.getEditdate()}</td>
 		<td>${u.getRegdate()}</td>
-		<td><a href="editform.jsp?id=${u.getSeq()}">Edit</a></td>
+		<td><a href="editform/${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>
 </c:forEach>
 </table>
-<br/><a href="addpostform.jsp">Add New Post</a>
+<br/>
+<button type="button" onclick="location.href='add'">새글쓰기</button>
 </body>
 </html>
